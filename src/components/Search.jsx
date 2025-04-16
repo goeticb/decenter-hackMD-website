@@ -40,7 +40,7 @@ const Search = ({ setCdpList, progressCount, setProgressCount, percent, setPerce
           <option value="USDC-A">USDC-A</option>
         </select>
 
-        <div className="w-full sm:w-1/2 flex gap-2">
+        <div className="w-full sm:w-1/2 flex flex-col sm:flex-row gap-2">
           <input
             type="text"
             placeholder="Enter CDP ID"
@@ -53,7 +53,7 @@ const Search = ({ setCdpList, progressCount, setProgressCount, percent, setPerce
             onClick={() => navigate(`/more-info/${rawInput}`)}
             disabled={isSearching || (rawInput !== '' && rawInput <= 0)}
             className={`px-4 py-2 rounded-lg text-white transition
-    ${rawInput !== '' && rawInput <= 0
+              ${rawInput !== '' && rawInput <= 0
                 ? 'bg-red-600 cursor-not-allowed'
                 : isSearching
                   ? 'bg-gray-500 cursor-not-allowed'
@@ -79,7 +79,8 @@ const Search = ({ setCdpList, progressCount, setProgressCount, percent, setPerce
         </div>
       </div>
     </div>
-  )
+  );
+
 }
 
 
