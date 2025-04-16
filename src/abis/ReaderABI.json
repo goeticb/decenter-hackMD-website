@@ -1,0 +1,74 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_vaultInfoAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_vatAddress",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "cdpId",
+                "type": "uint256"
+            }
+        ],
+        "name": "readCdpInfo",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "urn",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "owner",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "userAddr",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "ilk",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "collateral",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "debt",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "debtWithInterest",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct ReaderResponse",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

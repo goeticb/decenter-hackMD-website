@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../node_modules/@defisaver/tokens/esm/utils.js"],
+  "sourcesContent": ["/**\n * @param hex {string}\n * @returns {string}\n */\nexport function bytesToString(hex) {\n    return Buffer.from(hex.replace(/^0x/, ''), 'hex')\n        .toString()\n        .replace(/\\x00/g, '');\n}\n/**\n * @param str {string}\n * @return {string} input encoded to hex, padded to 32 bytes\n */\nexport function stringToBytes(str) {\n    let n = Buffer.from(str).toString('hex');\n    while (n.length < 64)\n        n = `${n}0`;\n    return `0x${n}`;\n}\nexport function compare(a = '', b = '') {\n    return a.toLowerCase() === b.toLowerCase();\n}\n"],
+  "mappings": ";;;AAIO,SAAS,cAAc,KAAK;AAC/B,SAAO,OAAO,KAAK,IAAI,QAAQ,OAAO,EAAE,GAAG,KAAK,EAC3C,SAAS,EACT,QAAQ,SAAS,EAAE;AAC5B;AAKO,SAAS,cAAc,KAAK;AAC/B,MAAI,IAAI,OAAO,KAAK,GAAG,EAAE,SAAS,KAAK;AACvC,SAAO,EAAE,SAAS;AACd,QAAI,GAAG,CAAC;AACZ,SAAO,KAAK,CAAC;AACjB;AACO,SAAS,QAAQ,IAAI,IAAI,IAAI,IAAI;AACpC,SAAO,EAAE,YAAY,MAAM,EAAE,YAAY;AAC7C;",
+  "names": []
+}
